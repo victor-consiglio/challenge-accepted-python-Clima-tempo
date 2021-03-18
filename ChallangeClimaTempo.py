@@ -28,9 +28,6 @@ olatitude, olongitude = latlong(observation.variables["lat"][:], observation.var
 forecast_temp = forecast.variables["t2m"][:]- 273.15
 observation_temp = observation.variables["temperatura"][:]
 lst = list()
-# Função para cortar somente a linha desejada
-root_mean = rmse(forecast_temp[0:7,:,:], observation_temp[0:7,:,:])
-lst.append(root_mean)
 
 # Criar lista com as linhas cortadas para o plot
 list_times = list(range(0,73,6))
